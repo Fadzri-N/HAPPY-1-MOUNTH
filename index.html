@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surat Spesial Untukmu</title>
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Pemutar Musik Spotify (Floating Mode - Tidak Menghalangi Konten) -->
+    <div class="spotify-floating-container" id="spotifyContainer">
+      <button
+        class="spotify-toggle-btn"
+        onclick="toggleSpotify()"
+        title="Putar Musik 🎵"
+      >
+        <span id="toggleIcon">🎵</span>
+      </button>
+      <div class="spotify-player-box">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/4xP4Ro6YVC09n1lsq9g1kx?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            fullscreen;
+            picture-in-picture;
+          "
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- HALAMAN 1: Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Halo, Sayanggg! <span class="highlight">✨</span></h1>
+        <p>
+          Ada pesan singkat dan surat spesial yang ingin aku sampaikan di bawah
+          ini.
+        </p>
+        <a href="#story" class="btn-scroll">
+          <i data-feather="chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- HALAMAN 2: Envelope Section -->
+    <section class="story-section" id="story">
+      <div class="envelope-wrapper" id="envelopeWrapper">
+        <!-- Kertas Surat -->
+        <div class="letter-paper">
+          <div class="letter-date">17 Agustus 2026</div>
+          <div class="letter-salutation">Hai, Lovee!</div>
+
+          <!-- Bagian Teks Surat yang Diubah untuk Efek Ketik Otomatis -->
+          <div class="story-text" id="typedText"></div>
+
+          <div class="letter-closing">
+            <p>Happy 1 month, ya! ✨</p>
+            <div class="letter-signature">Dari orang ganteng</div>
+          </div>
+        </div>
+
+        <!-- Bagian Amplop -->
+        <div class="envelope-flap"></div>
+        <div class="envelope-pocket"></div>
+
+        <!-- Segel -->
+        <div class="envelope-seal" id="envelopeSeal">
+          <i data-feather="mail"></i>
+        </div>
+
+        <!-- Teks Hint -->
+        <div class="envelope-hint" id="envelopeHint">
+          Klik segel untuk membuka
+        </div>
+      </div>
+    </section>
+
+    <!-- HALAMAN 3: Accordion Section -->
+    <section class="letter-section">
+      <div class="letter-container">
+        <h2>Pesan Buat Kamu 💌</h2>
+        <p class="letter-intro">
+          Buka pesan di bawah ini sesuai dengan kondisi perasaanmu saat ini:
+        </p>
+
+        <div class="open-when">
+          <details class="card-note">
+            <summary>
+              <i data-feather="smile"></i> Kalau lagi bad mood atau bete
+            </summary>
+            <p>
+              Jangan dipendem sendiri ya. Kalau ada yang mengganggu pikiranmu,
+              ceritain aja ke aku. Aku siap jadi pendengar yang baik buat kamu
+              kok!
+            </p>
+          </details>
+          <details class="card-note">
+            <summary>
+              <i data-feather="heart"></i> Kalau hari ini terasa berat buat kamu
+            </summary>
+            <p>
+              Tarik napas dulu yang dalam. Kamu udah hebat banget bisa
+              ngelewatin hari ini. Besok kita jalanin bareng lagi ya!
+            </p>
+          </details>
+          <details class="card-note">
+            <summary>
+              <i data-feather="star"></i> Spesial 1 Bulan Jadian ✨
+            </summary>
+            <p>
+              Makasih ya sudah mau nemenin aku selama 30 hari kebelakang ini.
+              Semoga kedepannya kita makin seru, makin klop, dan langgeng terus
+              ya, Sayanggg!
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- HALAMAN 4: Galeri Foto Mini Polaroid -->
+    <section class="gallery-section">
+      <div class="gallery-container">
+        <h2>Kenangan Kita 📸</h2>
+        <p class="gallery-intro">
+          Beberapa momen berharga yang selalu berkesan:
+        </p>
+
+        <div class="polaroid-grid">
+          <!-- Foto 1 -->
+          <div class="polaroid-card">
+            <div class="polaroid-img">
+              <img src="images/foto1.jpg" alt="Kenangan 1" />
+            </div>
+            <p class="polaroid-caption">First time fotbar ✨</p>
+          </div>
+
+          <!-- Foto 2 -->
+          <div class="polaroid-card">
+            <div class="polaroid-img">
+              <img src="images/foto2.jpg" alt="Kenangan 2" />
+            </div>
+            <p class="polaroid-caption">First flowers for her ❤️</p>
+          </div>
+
+          <!-- Foto 3 -->
+          <div class="polaroid-card">
+            <div class="polaroid-img">
+              <img src="images/foto3.jpg" alt="Kenangan 3" />
+            </div>
+            <p class="polaroid-caption">The day I asked her out 🌸</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HALAMAN: Mini Game Hadiah & Botol Harapan -->
+    <section class="minigame-section">
+      <div class="minigame-container">
+        <h2>Pilih Kotak & Lempar Harapan 🎁</h2>
+        <p class="minigame-intro">
+          Sentuh salah satu kotak hadiah di bawah, lalu tulis harapanmu hari
+          ini!
+        </p>
+
+        <!-- BAGIAN 1: Kotak Hadiah Misterius -->
+        <div class="mystery-boxes">
+          <div class="box-card" onclick="openBox(1)">
+            <div class="box-icon">🎁</div>
+            <p>Kotak 1</p>
+          </div>
+          <div class="box-card" onclick="openBox(2)">
+            <div class="box-icon">🎁</div>
+            <p>Kotak 2</p>
+          </div>
+          <div class="box-card" onclick="openBox(3)">
+            <div class="box-icon">🎁</div>
+            <p>Kotak 3</p>
+          </div>
+        </div>
+
+        <!-- Tampilan Pesan Hadiah -->
+        <div class="box-result-box" id="boxResult">
+          <p id="boxMessage">
+            Klik salah satu kotak di atas untuk buka kejutan kecilnya!
+          </p>
+        </div>
+
+        <!-- BAGIAN 2: Botol Harapan (Terhubung ke WhatsApp) -->
+        <div class="wishing-bottle-box">
+          <h3>Botol Harapan 🍾</h3>
+          <p class="bottle-desc">
+            Tulis satu hal atau harapan yang lagi kamu pendam, lalu kirim ke
+            aku:
+          </p>
+
+          <div class="bottle-input-group">
+            <input
+              type="text"
+              id="wishInput"
+              placeholder="Tulis pesan atau harapanmu..."
+            />
+            <button onclick="sendWishToWhatsApp()">Kirim ke WA 🌊</button>
+          </div>
+
+          <p class="bottle-response" id="wishResponse"></p>
+        </div>
+      </div>
+
+      <!-- Elemen Botol Animasi -->
+      <div class="bottle-animation-container">
+        <div id="flyingBottle" class="flying-bottle">🍾</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Dibuat dengan Spasi & Cinta ❤️</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
