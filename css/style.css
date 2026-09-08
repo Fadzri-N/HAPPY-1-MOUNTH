@@ -678,12 +678,32 @@ footer {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .bottle-input-group button:hover {
   background-color: #5b4cc4;
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* PERBAIKAN UNTUK HP: Tombol Kirim Botol Harapan agar tidak keluar layar */
+@media screen and (max-width: 480px) {
+  .bottle-input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .bottle-input-group input {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .bottle-input-group button {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 20px;
+  }
 }
 
 .bottle-response {
@@ -782,7 +802,7 @@ footer {
 }
 
 .spotify-floating-container.active .spotify-player-box {
-  max-height: 380px;
+  max-height: 160px; /* Diubah agar tinggi pas dan tidak ada ruang kosong di bawah */
   opacity: 1;
 }
 
@@ -796,9 +816,14 @@ footer {
     margin: 0 auto;
   }
 
+  .spotify-floating-container.active .spotify-player-box {
+    max-height: 152px; /* Disesuaikan agar pas dengan tinggi pemutar Spotify standar tanpa sisa ruang */
+  }
+
   .spotify-player-box iframe {
     width: 100% !important;
-    height: 250px !important; /* Tinggi iframe dikecilkan pas di HP */
+    height: 152px !important; /* Tinggi fix iframe Spotify agar tidak ada sisa hitam kosong di bawah */
+    display: block;
   }
 }
 
